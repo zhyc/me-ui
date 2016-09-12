@@ -65,15 +65,27 @@ a{
     bottom: 0;
     overflow: auto;
 }
-.toolbar{
-    position: absolute; 
-    top: 62px; 
-    background: #fff;
-    width: 100%;
-    border-bottom: 1px solid #EEEEEE;
-    box-shadow: 0 1px 3px rgba(50,50,50,.1);
-    padding: 25px 0;  
-    padding-left: 20px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+.logo{
+    display: inline-block;
+    font-size: 18px;
+    color: #FFF;
+    font-family: "微软雅黑";
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.silder ul{
+    overflow: hidden;
+    
+    li{
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        border-left: 2px solid #F0F0F0;
+        border-bottom: 1px solid #eaeaea;
+        padding-left: 25px;
+        &:hover{
+         border-left-color: #008080;  
+         background: #eaeaea; 
+        }
+    }
 }
