@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tabs</title>
+		<link href="../public/css/reset.css" rel="stylesheet">
+		<link href="../public/css/tabs.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<p>类型一</p>
+		<div class="tabs">
+			<div class="tab">
+				<ul>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div>内容区1</div>
+				<div>内容区2</div>
+				<div>内容区3</div>
+				<div>内容区4</div>
+				<div>内容区5</div>
+				<div>内容区6</div>
+			</div>
+		</div>
+		<div style="height: 2000px;"></div>
+		<script src="../public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.content').children('div').eq(0).show();
+				$('.tab ul li').eq(0).addClass('active');
+				$('.tab li').on('click', function() {
+					$('.tab li').removeClass('active');
+					$(this).addClass('active');
+					$('.content div').hide();
+					$('.content div').eq($(this).index()).fadeIn(1000);
+				});
+
+				$('.loading').addClass('animation');
+			});
+		</script>
+	</body>
+
+</html>
