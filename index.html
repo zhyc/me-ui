@@ -30,16 +30,12 @@
 				</ul>
 			</div>
 			<div class="content">
-				<!--<div style="height: 5000px;">
-					
-					height
-				</div>-->
 				<iframe src="" width="100%" height="100%" name="content" border="0" style="border: none; overflow-x: hidden;" id="iframe1" onload="iFrameHeight('iframe1')" ></iframe>
 			</div>
 			
 		</div>
 		<script>
-		console.log(document.getElementById("iframe1").contentWindow);
+//		console.log(document.getElementById("iframe1").contentWindow);
 		function iFrameHeight(id) {
 			var ifm= document.getElementById(id);
 			var subWeb = document.frames ? document.frames[id].document :ifm.contentDocument;
