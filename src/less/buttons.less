@@ -1,0 +1,42 @@
+/*base button*/
+.btn{
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    &-default{
+        background: #ccc;
+        color: #777;
+    }
+    &-disable{
+        cursor: default;
+        background: #ccc;
+        color: #C0C0C0;
+    }
+    &-normal{
+        background: #FF6D2A;
+        color: #fff;
+    }
+    &-hover{
+        background: #FF8A54;
+        color: #fff;
+    }
+    &-active{
+        background: #FC5D14;
+        color: #fff;
+    }
+}
+.btn-group{
+    .btn{
+        border-radius: 0;
+        position: relative;
+        
+    }
+    .btn:first-child{
+        border-radius: 4px 0 0 4px;
+    }
+    .btn:last-child{
+        border-radius:0 4px  4px 0;
+    }
+}

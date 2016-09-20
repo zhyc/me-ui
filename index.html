@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>ME-UI，我自己的ui库</title>
 		<link href="public/css/reset.css" rel="stylesheet">
+		<link href="public/css/base.css" rel="stylesheet">
 		<link href="public/css/layout.css" rel="stylesheet">
 		<link href="public/css/animate.min.css" rel="stylesheet">
 		
@@ -17,15 +18,15 @@
 			<div class="silder">
 				<ul class="animated bounceInLeft">
 					<li><a href="pages/tabs.html" target="content"><i class="icon iocn-tab"></i>选项卡<span>tabs</span></a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>按钮<span>buttons</span></a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
-					<li><a href=""><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="pages/buttons.html" target="content"><i class="icon iocn-tab"></i>按钮<span>buttons</span></a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
+					<li><a href="" target="content"><i class="icon iocn-tab"></i>TAB</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -33,10 +34,25 @@
 					
 					height
 				</div>-->
-				<iframe src="" width="100%" height="100%" name="content" border="0" style="border: none; overflow-x: hidden;"  class="animated bounceInRight"></iframe>
+				<iframe src="" width="100%" height="100%" name="content" border="0" style="border: none; overflow-x: hidden;" id="iframe1" onload="iFrameHeight('iframe1')" ></iframe>
 			</div>
 			
 		</div>
-		
+		<script>
+		console.log(document.getElementById("iframe1").contentWindow);
+		function iFrameHeight(id) {
+			var ifm= document.getElementById(id);
+			var subWeb = document.frames ? document.frames[id].document :ifm.contentDocument;
+			if(ifm != null && subWeb != null) {
+				ifm.height = subWeb.body.scrollHeight;
+			}
+		}
+	</script>
+	<script src="public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
+	<script>
+		$('.silder li').on('click',function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+	</script>
 	</body>
 </html>

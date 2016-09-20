@@ -1,35 +1,80 @@
-.tab,
-.content {
-  width: 900px;
-  margin: 0 auto;
+/*----------- base tabs -----------*/
+.tabs {
+  width: 100%;
 }
-.tab ul {
+.tabs .tab ul {
   overflow: hidden;
-  background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
-.tab li {
-  float: left;
-  width: 150px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 4px 4px 0 0;
-  text-align: center;
+.tabs .tab ul li {
+  color: #545454;
   cursor: pointer;
-  box-sizing: border-box;
-  border-bottom: 1px solid #000;
 }
-.tab li.active {
-  /*background: #000;*/
-  /*color: #fff;*/
-  border: 1px solid #000;
-  border-bottom: none;
-  padding-top: 1px;
-  background-color: #f1f1f1;
-}
-.content div {
-  width: 900px;
-  height: 300px;
+.tabs .content div {
   display: none;
-  background: #f1f1f1;
+  min-height: 100px;
+}
+.tabs .content div.active {
+  display: block;
+}
+/*----------- skin1 -----------*/
+.tabs-skin1 .tab ul {
+  border-bottom: 1px solid #cdcdcd;
+}
+.tabs-skin1 .tab ul li {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  width: 100%;
+}
+.tabs-skin1 .tab ul li.active {
+  border-bottom: 2px solid #ff6d2a;
+  color: #FF6D2A;
+}
+/*----------- tabs-skin2 -----------*/
+.tabs-skin2 .tab ul {
+  border-bottom: 1px solid #dadada;
+}
+.tabs-skin2 .tab ul li {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  width: 100%;
+}
+.tabs-skin2 .tab ul li.active {
+  background: #FF6D2A;
+  color: #fff;
+}
+/* 固定宽度的tab*/
+.tabs-fixed-w .tab ul {
+  border-bottom: 1px solid #dadada;
+  display: block;
+}
+.tabs-fixed-w .tab ul li {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  width: 120px;
+  display: inline-block;
+}
+/* 不固定宽度的tab*/
+.tabs-flexible-w .tab ul {
+  border-bottom: 1px solid #dadada;
+  display: block;
+}
+.tabs-flexible-w .tab ul li {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0 30px;
+  float: left;
+  width: auto;
 }
 /*# sourceMappingURL=tabs.css.map */

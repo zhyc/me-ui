@@ -5,15 +5,21 @@
 		<meta charset="UTF-8">
 		<title>tabs</title>
 		<link href="../public/css/reset.css" rel="stylesheet">
+		<link href="../public/css/base.css" rel="stylesheet">
 		<link href="../public/css/tabs.css" rel="stylesheet">
+		<link href="../public/css/animate.min.css" rel="stylesheet">
 	</head>
 
-	<body>
-		<p>类型一</p>
-		<div class="tabs">
+	<body class="animated bounceInRight">
+		<div class="explain">
+			tabs是常用的UI组件之一，在这里我整理出几种常见的样式，都是在同一样式基础上扩展而来的，基本的代码如下：
+			
+		</div>
+		<p class="explain">1.线性tab，最基本的样式，添加样式<code>.tabs-skin1</code></p>
+		<div class="tabs tabs-skin1">
 			<div class="tab">
 				<ul>
-					<li>菜单</li>
+					<li class="active">菜单</li>
 					<li>菜单</li>
 					<li>菜单</li>
 					<li>菜单</li>
@@ -22,7 +28,7 @@
 				</ul>
 			</div>
 			<div class="content">
-				<div>内容区1</div>
+				<div class="active">内容区1</div>
 				<div>内容区2</div>
 				<div>内容区3</div>
 				<div>内容区4</div>
@@ -30,20 +36,86 @@
 				<div>内容区6</div>
 			</div>
 		</div>
-		<div style="height: 2000px;"></div>
+		<p class="explain">2.块状tab，最基本的样式 ，添加样式<code>.tabs-skin2</code></p>
+		<div class="tabs tabs-skin2">
+			<div class="tab ">
+				<ul>
+					<li class="active">菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="active">内容区1</div>
+				<div>内容区2</div>
+				<div>内容区3</div>
+				<div>内容区4</div>
+				<div>内容区5</div>
+				<div>内容区6</div>
+			</div>
+		</div>
+		
+		<p class="explain">3.固定宽度tab，需添加样式<code>.tabs-fixed-w</code></p>
+		<div class="tabs tabs-skin1 tabs-fixed-w">
+			<div class="tab ">
+				<ul>
+					<li class="active">菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="active">内容区1</div>
+				<div>内容区2</div>
+				<div>内容区3</div>
+				<div>内容区4</div>
+				<div>内容区5</div>
+				<div>内容区6</div>
+			</div>
+		</div>
+		
+		<p class="explain">4.不固定宽度tab，根据字数决定长度，需添加样式<code>.tabs-flexible-w"</code></p>
+		<div class="tabs tabs-skin2 tabs-flexible-w">
+			<div class="tab ">
+				<ul>
+					<li class="active">菜单</li>
+					<li>字数决定长度</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+					<li>菜单</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="active">内容区1</div>
+				<div>内容区2</div>
+				<div>内容区3</div>
+				<div>内容区4</div>
+				<div>内容区5</div>
+				<div>内容区6</div>
+			</div>
+		</div>
+		
+		
+		
 		<script src="../public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('.content').children('div').eq(0).show();
-				$('.tab ul li').eq(0).addClass('active');
-				$('.tab li').on('click', function() {
-					$('.tab li').removeClass('active');
-					$(this).addClass('active');
-					$('.content div').hide();
-					$('.content div').eq($(this).index()).fadeIn(1000);
+				$('.tabs').each(function(){
+					var i=$(this).index();
+					$(this).find('.tab').addClass("tab_"+i).find('li').on('click', function(){
+						$(this).addClass('active').siblings().removeClass('active');
+						
+					$(this).parents('.tab').siblings('.content').children('div').eq($(this).index()).show().siblings().hide();
+					});
+					
 				});
-
-				$('.loading').addClass('animation');
 			});
 		</script>
 	</body>

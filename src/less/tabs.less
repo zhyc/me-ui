@@ -1,34 +1,101 @@
-.tab,.content{
-    width: 900px;
-    margin: 0 auto;
+/*----------- base tabs -----------*/
+.tabs{
+    width:100%;
+    .tab{
+        
+        ul{
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            li{
+                color: #545454;
+                cursor: pointer;
+            }
+            
+        }
+    }
+    .content{
+        div{
+            display: none;
+            min-height: 100px;
+            &.active{
+                display: block;
+            }
+        }
+    }
 }
-.tab ul{
-    overflow: hidden;
-    background: #f1f1f1;
+/*----------- skin1 -----------*/
+.tabs-skin1{
+    .tab ul{
+        border-bottom: 1px solid #cdcdcd;
+        li
+        {
+             height: 45px;
+            line-height:45px;
+            text-align: center;
+            width: 100%;
+            &.active{
+                border-bottom: 2px solid #ff6d2a;
+                color: #FF6D2A;
+            }
+        }
+    }
 }
-.tab li{
-    float: left;
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 4px 4px 0 0;
-    text-align: center;
-    cursor: pointer;
-    box-sizing:border-box;
-    border-bottom: 1px solid #000;
-}
-.tab li.active{
-    /*background: #000;*/
-    /*color: #fff;*/
-    border: 1px solid #000;
-    border-bottom: none;
-    padding-top: 1px;
-    background-color: #f1f1f1;
+/*----------- tabs-skin2 -----------*/
+.tabs-skin2{
+    .tab ul{
+        border-bottom: 1px solid #dadada;
+        li
+        {
+             height: 45px;
+            line-height:45px;
+            text-align: center;
+            width: 100%;
+            &.active{
+                background: #FF6D2A;
+                color: #fff;
+            }
+        }
+    }
 }
 
-.content div{
-    width: 900px;
-    height: 300px;
-    display: none;
-    background: #f1f1f1;
+/* 固定宽度的tab*/
+.tabs-fixed-w{
+    .tab ul{
+        border-bottom: 1px solid #dadada;
+        display: block;
+        li
+        {
+            height: 45px;
+            line-height:45px;
+            text-align: center;
+            width: 120px;
+            display: inline-block;
+           
+        }
+    }
+}
+/* 不固定宽度的tab*/
+.tabs-flexible-w{
+    .tab ul{
+        border-bottom: 1px solid #dadada;
+        display: block;
+       
+        li
+        {
+            height: 45px;
+            line-height:45px;
+            text-align: center;
+            padding: 0 30px;
+            float: left;
+            width: auto;
+           
+        }
+    }
 }
