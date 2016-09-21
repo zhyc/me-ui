@@ -5,6 +5,7 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  margin: 0 5px;
 }
 .btn-default {
   background: #ccc;
@@ -30,6 +31,7 @@
 .btn-group .btn {
   border-radius: 0;
   position: relative;
+  margin: 0;
 }
 .btn-group .btn:first-child {
   border-radius: 4px 0 0 4px;
