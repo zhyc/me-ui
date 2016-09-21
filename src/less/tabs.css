@@ -17,11 +17,11 @@
   color: #545454;
   cursor: pointer;
 }
-.tabs .content div {
+.tabs .tab-content div {
   display: none;
   min-height: 100px;
 }
-.tabs .content div.active {
+.tabs .tab-content div.active {
   display: block;
 }
 /*----------- skin1 -----------*/

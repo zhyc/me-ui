@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>tabs</title>
-		<link href="../public/css/reset.css" rel="stylesheet">
-		<link href="../public/css/base.css" rel="stylesheet">
-		<link href="../public/css/tabs.css" rel="stylesheet">
-		<link href="../public/css/animate.min.css" rel="stylesheet">
-	</head>
-
-	<body class="animated bounceInRight">
+		<link href="public/css/tabs.css" rel="stylesheet">
+		<script src= "public/js/me-tabs.js"></script>	
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$('.tabs').respTabs();
+				
+			});
+		</script>
 		<div class="explain">
 			tabs是常用的UI组件之一，在这里我整理出几种常见的样式，都是在同一样式基础上扩展而来的，基本的代码如下：
 			<pre>
@@ -18,7 +15,7 @@
 			</pre>
 		</div>
 		<p class="explain">1.线性tab，最基本的样式，添加样式<code>.tabs-skin1</code></p>
-		<div class="tabs tabs-skin1">
+		<div class="tabs tabs-skin1" id="tab1">
 			<div class="tab">
 				<ul>
 					<li class="active">菜单</li>
@@ -29,7 +26,7 @@
 					<li>菜单</li>
 				</ul>
 			</div>
-			<div class="content">
+			<div class="tab-content">
 				<div class="active">内容区1</div>
 				<div>内容区2</div>
 				<div>内容区3</div>
@@ -50,7 +47,7 @@
 					<li>菜单</li>
 				</ul>
 			</div>
-			<div class="content">
+			<div class="tab-content">
 				<div class="active">内容区1</div>
 				<div>内容区2</div>
 				<div>内容区3</div>
@@ -72,7 +69,7 @@
 					<li>菜单</li>
 				</ul>
 			</div>
-			<div class="content">
+			<div class="tab-content">
 				<div class="active">内容区1</div>
 				<div>内容区2</div>
 				<div>内容区3</div>
@@ -94,7 +91,7 @@
 					<li>菜单</li>
 				</ul>
 			</div>
-			<div class="content">
+			<div class="tab-content">
 				<div class="active">内容区1</div>
 				<div>内容区2</div>
 				<div>内容区3</div>
@@ -103,23 +100,3 @@
 				<div>内容区6</div>
 			</div>
 		</div>
-		
-		
-		
-		<script src="../public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.tabs').each(function(){
-					var i=$(this).index();
-					$(this).find('.tab').addClass("tab_"+i).find('li').on('click', function(){
-						$(this).addClass('active').siblings().removeClass('active');
-						
-					$(this).parents('.tab').siblings('.content').children('div').eq($(this).index()).show().siblings().hide();
-					});
-					
-				});
-			});
-		</script>
-	</body>
-
-</html>
