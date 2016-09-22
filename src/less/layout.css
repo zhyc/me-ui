@@ -86,11 +86,8 @@ a {
   color: #505050;
   text-decoration: none;
 }
-.silder ul li .icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
+.silder ul li i.fa {
+  margin-right: 10px;
 }
 .silder ul li span {
   font-size: 12px;

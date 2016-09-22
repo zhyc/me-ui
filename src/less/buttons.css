@@ -1,11 +1,19 @@
 /*base button*/
 .btn {
-  padding: 4px 6px;
-  border-radius: 4px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   margin: 0 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
 }
 .btn-default {
   background: #ccc;

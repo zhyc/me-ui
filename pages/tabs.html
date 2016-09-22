@@ -1,13 +1,9 @@
 
 		<link href="public/css/tabs.css" rel="stylesheet">
-		<script src= "public/js/me-tabs.js"></script>	
-		<script type="text/javascript">
-			$(document).ready(function(){
-				
-				$('.tabs').respTabs();
-				
-			});
-		</script>
+		
+		<div  ng-controller="tabsController">
+			
+		
 		<div class="explain">
 			tabs是常用的UI组件之一，在这里我整理出几种常见的样式，都是在同一样式基础上扩展而来的，基本的代码如下：
 			<pre>
@@ -100,3 +96,6 @@
 				<div>内容区6</div>
 			</div>
 		</div>
+</div>
+<script src= "public/js/me-tabs.js"></script>	
+		
