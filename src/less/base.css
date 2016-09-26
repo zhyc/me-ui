@@ -5,17 +5,54 @@ body {
 .explain {
   margin: 15px 0px;
   padding: 5px;
-  background: #fafafa;
-  font-size: 12px;
+  font-size: 14px;
   color: #505050;
-  line-height: 24px;
+  line-height: 18px;
 }
 .explain code {
-  padding: 2px;
-  border: 1px solid #Ccc;
-  background: #EAEAEA;
+  font-size: 12px;
+  border: 1px solid #dedede;
+  background: #eee;
   color: #FF6D2A;
+  font-weight: normal;
   margin-left: 5px;
   border-radius: 2px;
+}
+.explain code.block {
+  display: block;
+  margin-left: 0;
+  border: none;
+}
+.explain code pre {
+  margin: 0;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+.explain code .pre-scrollable {
+  max-height: 280px;
+  overflow-y: auto;
+}
+pre.prettyprint {
+  margin-bottom: 20px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+pre.prettyprint .atv {
+  color: #D14;
+}
+pre.prettyprint .tag {
+  color: #007;
+}
+pre.prettyprint .atn,
+pre.prettyprint .var {
+  color: teal;
+}
+pre.prettyprint .pln {
+  color: #48484c;
+}
+pre.prettyprint.linenums {
+  box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+pre.prettyprint ol li {
+  line-height: 18px !important;
 }
 /*# sourceMappingURL=base.css.map */

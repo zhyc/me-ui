@@ -1,30 +1,30 @@
 
-//appModule.controller('tabsController', function($scope) {
-//	
-//	
-//  $('.tabs').each(function(){
-//			$(this).find('tab').each(function(){
-//				$(this).find('li').on('click',function({
-//					$(this).addClass('active').siblings().removeClass('active');
-//					$('.tab').siblings('.tab-content').children('div').eq($(this).index()).addClass('active').siblings().removeClass('active');
-//				}))
-//			})
-//		});
-//});
-
-
-$(document).ready(function(){
-	debugger;
-	$('.tabs').each(function() {
-	var i = $(this).index();
-	$(this).find('.tab').addClass("tab_" + i).find('li').on('click', function() {
-		$(this).addClass('active').siblings().removeClass('active');
-
-		$(this).parents('.tab').siblings('.tab-content').children('div').eq($(this).index()).show().siblings().hide();
-	});
-
+appModule.controller('mainController', function($scope) {
+	
+	$(document).ready(function(){
+    $('.tabs').each(function(){
+			$(this).find('tab').each(function(){
+				$(this).find('li').on('click',function({
+					$(this).addClass('active').siblings().removeClass('active');
+					$('.tab').siblings('.tab-content').children('div').eq($(this).index()).addClass('active').siblings().removeClass('active');
+				}))
+			})
+		});
 });
 })
+
+//$(document).ready(function(){
+//	debugger;
+//	$('.tabs').each(function() {
+//	var i = $(this).index();
+//	$(this).find('.tab').addClass("tab_" + i).find('li').on('click', function() {
+//		$(this).addClass('active').siblings().removeClass('active');
+//
+//		$(this).parents('.tab').siblings('.tab-content').children('div').eq($(this).index()).show().siblings().hide();
+//	});
+//
+//});
+//})
 
 
 

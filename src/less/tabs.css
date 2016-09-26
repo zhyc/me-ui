@@ -12,10 +12,12 @@
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  padding: 0;
 }
 .tabs .tab ul li {
   color: #545454;
   cursor: pointer;
+  list-style: none;
 }
 .tabs .tab-content div {
   display: none;

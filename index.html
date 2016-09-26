@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>ME-UI，我自己的ui库</title>
-		<link href="public/css/reset.css" rel="stylesheet">
+		<!--代码高亮-->
+		<script src="public/prettyPrint/js/prettify.js"></script>
+		<link href="public/prettyPrint/css/prettify.css" rel="stylesheet">
+		
+		<!--<link href="public/css/reset.css" rel="stylesheet">-->
+		<link href="public/css/normalize.css" rel="stylesheet">
+		
 		<link href="public/css/base.css" rel="stylesheet">
 		<link href="public/css/layout.css" rel="stylesheet">
 		<link href="public/css/animate.min.css" rel="stylesheet">
@@ -14,8 +20,9 @@
 		<script src="public/angular-1.2.14/angular-route.js"></script>
 		
 		<script src="public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
+		
 	</head>
-	<body  ng-controller="mainController">
+	<body  ng-controller="mainController" onload="prettyPrint()">
 
 		<div class="page">
 			<div class="header">

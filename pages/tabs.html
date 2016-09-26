@@ -1,101 +1,157 @@
+<link href="public/css/tabs.css" rel="stylesheet">
 
-		<link href="public/css/tabs.css" rel="stylesheet">
-		
-		<div  ng-controller="tabsController">
-			
-		
-		<div class="explain">
-			tabs是常用的UI组件之一，在这里我整理出几种常见的样式，都是在同一样式基础上扩展而来的，基本的代码如下：
-			<pre>
-				
+<div ng-controller="tabsController">
+
+	<div class="explain">
+		<p>tabs是常用的UI组件之一，在这里我整理出几种常见的样式，都是在同一样式基础上扩展而来的。</p>
+		<p>基本型的自适应宽度，可根据li标签的多少自适应</p>
+		<p>基本HTML代码如下：</p>
+		<code class="block">
+				<pre class="prettyprint linenums pre-scrollable">
+&lt;<span class="tag">div</span> class="tabs " &gt;
+	&lt;<span class="tag">div</span> class="tab"&gt;
+		&lt;ul&gt;
+			&lt;li class="active"&gt;菜单&lt;/li&gt;
+			&lt;li&gt;菜单&lt;/li&gt;
+			&lt;li&gt;菜单&lt;/li&gt;
+			&lt;li&gt;菜单&lt;/li&gt;
+			&lt;li&gt;菜单&lt;/li&gt;
+			&lt;li&gt;菜单&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;<span class="tag">div</span> class="tab-content"&gt;
+		&lt;<span class="tag">div</span> class="active"&gt;内容区1&lt;/div&gt;
+		&lt;<span class="tag">div</span>&gt;内容区2&lt;/div&gt;
+		&lt;<span class="tag">div</span>&gt;内容区3&lt;/div&gt;
+		&lt;<span class="tag">div</span>&gt;内容区4&lt;/div&gt;
+		&lt;<span class="tag">div</span>&gt;内容区5&lt;/div&gt;
+		&lt;<span class="tag">div</span>&gt;内容区6&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 			</pre>
+			</code>
+			<p>LESS代码如下：</p>
+			<code class="block">
+				<pre class="prettyprint linenums pre-scrollable">
+.tabs{
+    width:100%;
+    .tab{
+        ul{
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            padding: 0;
+            li{
+                color: #545454;
+                cursor: pointer;
+                list-style: none;
+            }
+        }
+    }
+   .tab-content{
+        div{
+            display: none;
+            min-height: 100px;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}
+				</pre>
+			</code>
+	</div>
+	<p class="explain">1.线性tab(基本型)，最基本的样式，添加样式<code>.tabs-skin1</code></p>
+	<div class="tabs tabs-skin1" id="tab1">
+		<div class="tab">
+			<ul>
+				<li class="active">菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+			</ul>
 		</div>
-		<p class="explain">1.线性tab，最基本的样式，添加样式<code>.tabs-skin1</code></p>
-		<div class="tabs tabs-skin1" id="tab1">
-			<div class="tab">
-				<ul>
-					<li class="active">菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-				</ul>
-			</div>
-			<div class="tab-content">
-				<div class="active">内容区1</div>
-				<div>内容区2</div>
-				<div>内容区3</div>
-				<div>内容区4</div>
-				<div>内容区5</div>
-				<div>内容区6</div>
-			</div>
+		<div class="tab-content">
+			<div class="active">内容区1</div>
+			<div>内容区2</div>
+			<div>内容区3</div>
+			<div>内容区4</div>
+			<div>内容区5</div>
+			<div>内容区6</div>
 		</div>
-		<p class="explain">2.块状tab，最基本的样式 ，添加样式<code>.tabs-skin2</code></p>
-		<div class="tabs tabs-skin2">
-			<div class="tab ">
-				<ul>
-					<li class="active">菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-				</ul>
-			</div>
-			<div class="tab-content">
-				<div class="active">内容区1</div>
-				<div>内容区2</div>
-				<div>内容区3</div>
-				<div>内容区4</div>
-				<div>内容区5</div>
-				<div>内容区6</div>
-			</div>
+	</div>
+	<p class="explain">2.块状tab(基本型)，最基本的样式 ，添加样式<code>.tabs-skin2</code></p>
+	<div class="tabs tabs-skin2">
+		<div class="tab ">
+			<ul>
+				<li class="active">菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+			</ul>
 		</div>
-		
-		<p class="explain">3.固定宽度tab，需添加样式<code>.tabs-fixed-w</code></p>
-		<div class="tabs tabs-skin1 tabs-fixed-w">
-			<div class="tab ">
-				<ul>
-					<li class="active">菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-				</ul>
-			</div>
-			<div class="tab-content">
-				<div class="active">内容区1</div>
-				<div>内容区2</div>
-				<div>内容区3</div>
-				<div>内容区4</div>
-				<div>内容区5</div>
-				<div>内容区6</div>
-			</div>
+		<div class="tab-content">
+			<div class="active">内容区1</div>
+			<div>内容区2</div>
+			<div>内容区3</div>
+			<div>内容区4</div>
+			<div>内容区5</div>
+			<div>内容区6</div>
 		</div>
-		
-		<p class="explain">4.不固定宽度tab，根据字数决定长度，需添加样式<code>.tabs-flexible-w"</code></p>
-		<div class="tabs tabs-skin2 tabs-flexible-w">
-			<div class="tab ">
-				<ul>
-					<li class="active">菜单</li>
-					<li>字数决定长度</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-					<li>菜单</li>
-				</ul>
-			</div>
-			<div class="tab-content">
-				<div class="active">内容区1</div>
-				<div>内容区2</div>
-				<div>内容区3</div>
-				<div>内容区4</div>
-				<div>内容区5</div>
-				<div>内容区6</div>
-			</div>
+	</div>
+
+	<p class="explain">3.固定宽度tab，需添加样式<code>.tabs-fixed-w</code></p>
+	<div class="tabs tabs-skin1 tabs-fixed-w">
+		<div class="tab ">
+			<ul>
+				<li class="active">菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+			</ul>
 		</div>
+		<div class="tab-content">
+			<div class="active">内容区1</div>
+			<div>内容区2</div>
+			<div>内容区3</div>
+			<div>内容区4</div>
+			<div>内容区5</div>
+			<div>内容区6</div>
+		</div>
+	</div>
+
+	<p class="explain">4.不固定宽度tab，根据字数决定长度，需添加样式<code>.tabs-flexible-w"</code></p>
+	<div class="tabs tabs-skin2 tabs-flexible-w">
+		<div class="tab ">
+			<ul>
+				<li class="active">菜单</li>
+				<li>字数决定长度</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+				<li>菜单</li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<div class="active">内容区1</div>
+			<div>内容区2</div>
+			<div>内容区3</div>
+			<div>内容区4</div>
+			<div>内容区5</div>
+			<div>内容区6</div>
+		</div>
+	</div>
 </div>
-<script src= "public/js/me-tabs.js"></script>	
-		
+<script src="public/js/me-tabs.js"></script>
