@@ -25,6 +25,11 @@ appModule.config(function($routeProvider) {
             templateUrl : 'pages/stars.html',
             controller  : 'starsController'
         })
+        // route for the stars page
+        .when('/accordion', {
+            templateUrl : 'pages/accordion.html',
+            controller  : 'accordionController'
+        })
         .otherwise('/');
 });
 

@@ -1,0 +1,78 @@
+<title>accordion</title>
+<meta charset="utf-8">
+<link href="public/css/accordion.css" rel="stylesheet">
+<style type="text/css">
+	.accordion {
+  width: 200px;
+}
+.accordion h2 {
+  background: #5a5a5a;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.accordion h2:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 5px solid #fff;
+  border-color: #fff transparent transparent transparent;
+}
+.accordion h2 a {
+  color: #fff;
+}
+.accordion .context {
+  height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: height 0.5s ease-in;
+}
+.accordion :target .context {
+  height: 100px;
+  overflow: auto;
+}
+.accordion :target h2:before {
+  border-color: transparent transparent transparent #fff;
+}
+</style>
+<div ng-controller="accordionController">
+	<div class="explain">
+		手风琴效果
+
+	</div>
+	<p>css3实现</p>
+	<div class="accordion">
+		<div class="menu" id="brand">
+			<h2><a href="#brand">菜单项</a></h2>
+			<div class="context">
+				这里是内容111
+			</div>
+		</div>
+		<div class="menu" id="brand2">
+			<h2><a href="#brand2">菜单项</a></h2>
+			<div class="context">
+				这里是内容222
+			</div>
+		</div>
+		<div class="menu" id="brand3">
+			<h2><a href="#brand3">菜单项</a></h2>
+			<div class="context">
+				这里是内容333
+			</div>
+		</div>
+		<div class="menu" id="brand4">
+			<h2><a href="#brand4">菜单项</a></h2>
+			<div class="context">
+				这里是内容
+			</div>
+		</div>
+	</div>
+	
+</div>
