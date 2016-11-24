@@ -1,10 +1,11 @@
-var appModule = angular.module('scotchApp', ['ngRoute']);
+ angular.module("myApp",["ngRoute"])
 
-// configure our routes
-appModule.config(function($routeProvider) {
-	$routeProvider
-	// route for the home page
-        .when('/', {
+    .controller("myCtrl",function($scope,$location){
+
+    })
+    .config(function($routeProvider, $locationProvider) {
+          $routeProvider
+           .when('/', {
             templateUrl : 'pages/home.html',
             controller  : 'mainController'
         })
@@ -30,12 +31,16 @@ appModule.config(function($routeProvider) {
             templateUrl : 'pages/accordion.html',
             controller  : 'accordionController'
         })
+        // route for the stars page
+        .when('/hover', {
+            templateUrl : 'pages/hover.html',
+            controller  : 'hoverController'
+        })
+        // route for the stars page
+        .when('/progress', {
+            templateUrl : 'pages/progress.html',
+            controller  : 'progressController'
+        })
         .otherwise('/');
-});
-
-var mainCtrl = function($scope){
-	$scope.message = 'Everyone come and see how good I look!';
-}
-
-appModule.controller('mainController', mainCtrl);
-
+    });
+    

@@ -1,3 +1,5 @@
+@import 'variable'; // 引入变量
+
 
 ::-webkit-scrollbar/*整体部分*/
 {
@@ -7,25 +9,32 @@ height:10px;
 
 ::-webkit-scrollbar-track/*滑动轨道*/
 {
--webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+-webkit-box-shadow: inset 0 0 @base-space rgba(0,0,0,0.2);
 border-radius: 0px;
 background: rgba(0,0,0,0.1);
 }
 
 ::-webkit-scrollbar-thumb/*滑块*/
 {
-border-radius: 5px;
--webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+border-radius: @base-space;
+-webkit-box-shadow: inset 0 0 @base-space rgba(0,0,0,0.2);
 background: rgba(0,0,0,0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover/*滑块效果*/
 {
-border-radius: 5px;
--webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+border-radius: @base-space;
+-webkit-box-shadow: inset 0 0 @base-space rgba(0,0,0,0.2);
 background: rgba(0,0,0,0.4);
 }
-html,body{}
+html{
+    font-size: @html-font;
+}
+body{
+    font-size: @base-fontSize;
+    color: @font-baseColor;
+    font-family: Arial,"Microsoft Yahei";
+}
 a{
     text-decoration: none;
 }
@@ -41,13 +50,13 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    height: 62px;
-    background: linear-gradient(to right, #369256, #369895);
+    height: @base-space*12;
+    background: linear-gradient(to right, @first-color, @end-color);
 }
 .silder{
     position: absolute;
     left: 0;
-    top: 62px;
+    top: @base-space*12;
     bottom: 0;
     width: 200px;
     background: #f0f0f0;
@@ -55,7 +64,7 @@ a{
 .content{
     position: absolute;
     left: 200px;
-    top: 62px;
+    top: @base-space*12;
     right: 0;
     padding-left: 10px;
     padding-right: 10px;
@@ -64,38 +73,47 @@ a{
 }
 .logo{
     display: inline-block;
-    font-size: 18px;
+    font-size: @big-fontSize;
     color: #FFF;
     font-family: "微软雅黑";
-    margin-top: 15px;
-    margin-left: 30px;
+    margin-top: @base-space*3;
+    margin-left: @base-space*6;
     font-weight: bold;
 }
 .silder ul{
     overflow: hidden;
+    margin: 0;
+    padding: 0;
     
     li{
         display: block;
-        height: 35px;
-        line-height: 35px;
+        height: @base-space*7;
+        line-height: @base-space*7;
         border-left: 2px solid #F0F0F0;
         border-bottom: 1px solid #eaeaea;
-        padding-left: 25px;
+        padding-left: @base-space*3;
         &:hover,
         &.active{
-         border-left-color: #008080;  
-         background: #eaeaea; 
+         border-left-color: @first-color;  
+         background: linear-gradient(to right,  @first-color, @end-color);
+         a{
+             color: #FAFAFA;
+             
+             span{
+                 color: #eee;
+             }
+         }
         }
         a{
-            color: #505050;
+            color: @font-baseColor;
             text-decoration: none;
         }
-        i.fa{
+        i.iconfont{
             margin-right:10px
         }
         span{
-            font-size: 12px;
-            margin-left: 5px;
+            font-size: @small-fontSize;
+            margin-left: @base-space;
             color: #999999;
         }
     }

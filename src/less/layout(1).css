@@ -1,0 +1,119 @@
+::-webkit-scrollbar /*整体部分*/
+{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track /*滑动轨道*/
+{
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb /*滑块*/
+{
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover /*滑块效果*/
+{
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+  color: #505050;
+  font-family: Arial, "Microsoft Yahei";
+}
+a {
+  text-decoration: none;
+}
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to right, #369256, #369895);
+}
+.silder {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  width: 200px;
+  background: #f0f0f0;
+}
+.content {
+  position: absolute;
+  left: 200px;
+  top: 60px;
+  right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  bottom: 0;
+  overflow: auto;
+}
+.logo {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #FFF;
+  font-family: "微软雅黑";
+  margin-top: 15px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+.silder ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.silder ul li {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  border-left: 2px solid #F0F0F0;
+  border-bottom: 1px solid #eaeaea;
+  padding-left: 15px;
+}
+.silder ul li:hover,
+.silder ul li.active {
+  border-left-color: #369256;
+  background: linear-gradient(to right, #369256, #369895);
+}
+.silder ul li:hover a,
+.silder ul li.active a {
+  color: #FAFAFA;
+}
+.silder ul li:hover a span,
+.silder ul li.active a span {
+  color: #eee;
+}
+.silder ul li a {
+  color: #505050;
+  text-decoration: none;
+}
+.silder ul li i.iconfont {
+  margin-right: 10px;
+}
+.silder ul li span {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  color: #999999;
+}
+iframe {
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=layout.css.map */

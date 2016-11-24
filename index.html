@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="scotchApp">
+<html ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
 		<title>ME-UI，我自己的ui库</title>
@@ -7,22 +7,22 @@
 		<script src="public/prettyPrint/js/prettify.js"></script>
 		<link href="public/prettyPrint/css/prettify.css" rel="stylesheet">
 		
-		<link href="public/css/reset.css" rel="stylesheet">
+		<!--<link href="public/css/reset.css" rel="stylesheet">-->
 		<link href="public/css/normalize.css" rel="stylesheet">
 		
 		<link href="public/css/base.css" rel="stylesheet">
 		<link href="public/css/layout.css" rel="stylesheet">
-		<link href="public/css/animate.min.css" rel="stylesheet">
+		<link href="public/css/animate.min.css" rel="stylesheet"> <!-- css3动画库 -->
 		
-		<link href="public/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+		<link href="public/font/iconfont.css" rel="stylesheet"> <!-- 字体图标样式 -->
 		
-		<script src="public/angular-1.2.14/angular.min.js"></script>
-		<script src="public/angular-1.2.14/angular-route.js"></script>
+		<script src="public/angular-1.5.8/angular.min.js"></script>
+		<script src="public/angular-1.5.8/angular-route.js"></script>
 		
 		<script src="public/jquery-1.9.1/jquery-1.9.1.min.js"></script>
 		
 	</head>
-	<body  ng-controller="mainController" onload="prettyPrint()">
+	<body  ng-controller="myCtrl" onload="prettyPrint()">
 
 		<div class="page">
 			<div class="header">
@@ -30,19 +30,21 @@
 			</div>
 			<div class="silder">
 				<ul class="animated bounceInLeft">
-					<li><a href="#/tabs"><i class="fa fa-th-list"></i> 选项卡<span>tabs</span></a></li>
-					<li><a href="#/buttons"><i class="fa fa-plug"></i> 按钮<span>buttons</span></a></li>
-					<li><a href="#/stars"><i class="fa fa-star"></i> 星星评价<span>stars</span></a></li>
-					<li><a href="#/accordion" ><i class="fa fa-laptop"></i> 折叠<span>fold</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-comments"></i> 对话框 弹出层<span>popups</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-navicon"></i> 导航条<span>navigation</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-bookmark"></i> 面包屑导航<span>crumbs</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-sort fa-rotate-90"></i> 翻页<span>pagination</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-toggle-down"></i> 下拉菜单<span>dropdown</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-chevron-up"></i> 返回顶部<span>totop</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-rocket"></i> 进度条 <span>loading</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-flag"></i> 徽标 <span>badge</span></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-list-alt"></i> 列表<span>list</span> </a></li>
+					<li class="active"><a href="#/"><i class="iconfont">&#xe63a;</i> 首页<span>home</span></a></li>
+					<li><a href="#/tabs"><i class="iconfont">&#xe62f;</i> 选项卡<span>tabs</span></a></li>
+					<li><a href="#/buttons"><i class="iconfont">&#xe636;</i> 按钮<span>buttons</span></a></li>
+					<li><a href="#/stars"><i class="iconfont">&#xe62d;</i> 星星评价<span>stars</span></a></li>
+					<li><a href="#/accordion" ><i class="iconfont">&#xe636;</i> 折叠<span>fold</span></a></li>
+					<li><a href="#/hover" ><i class="iconfont">&#xe603;</i> 鼠标滑过按钮特效<span>fold</span></a></li>
+					<li><a href="#/progress"><i class="iconfont">&#xe656;</i> 进度条 <span>loading</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 对话框 弹出层<span>popups</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 导航条<span>navigation</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 面包屑导航<span>crumbs</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 翻页<span>pagination</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 下拉菜单<span>dropdown</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 返回顶部<span>totop</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe636;</i> 徽标 <span>badge</span></a></li>
+					<li><a href="javascript:void(0);"><i class="iconfont">&#xe631;</i> 列表<span>list</span> </a></li>
 					
 				</ul>
 			</div>
@@ -54,10 +56,5 @@
 
 	<script src= "myUsers.js"></script>	
 	<script src= "public/js/pages.js"></script>	
-	<script>
-		
-	
-		</script>
-	
 	</body>
 </html>
