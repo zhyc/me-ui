@@ -36,6 +36,7 @@
             templateUrl : 'pages/hover.html',
             controller  : 'hoverController'
         })
+       
         // route for the stars page
         .when('/progress', {
             templateUrl : 'pages/progress.html',
